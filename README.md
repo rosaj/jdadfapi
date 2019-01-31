@@ -5,7 +5,7 @@ An ADF java library for editing and creating common ADF xml files.
 ![Version](https://img.shields.io/github/manifest-json/v/rosaj/jdadfapi.svg?style=flat)
 
 
-A java api create for editing and creating xml for Oracle ADF applications. This is usually done through JDeveloper but when doing repetitve task you really should make it faster.
+A java library for editing and creating xml for Oracle ADF applications. This is usually done through JDeveloper but when doing repetitve task you really should make it faster.
 For now only the most common xml files can be modifyed such as ViewObjects, Entites, Associations, ViewLinks, ApplicationModules ets.
 
 This api is using decentxml for xml management, which preserve the attribute order of each xml tag, opposite to DOM xml parsers.
