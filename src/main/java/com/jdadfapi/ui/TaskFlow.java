@@ -183,6 +183,18 @@ public class TaskFlow extends XMLDocument {
 
     }
 
+    public  View getView(String name){
+        for (View view : getViews()) {
+            if(view.getId().equals(name)) return view;
+        }
+        return null;
+    }
+    public View getDefaultView(){
+        if(hasDefaultActivity()){
+            return getView(getDefaultActivity().getDefaultActivity());
+        }
+        return null;
+    }
 
     public DefaultActivity getDefaultActivity() {
         return defaultActivity;
