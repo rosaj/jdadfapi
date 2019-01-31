@@ -1,5 +1,5 @@
 # JD ADF API
-An ADF java api for editing and creating common ADF xml files.
+An ADF java library for editing and creating common ADF xml files.
 
 ![Build Status]( https://img.shields.io/gitlab/pipeline/rosaj/jdadfapi.svg?style=flat  )
 ![Version](https://img.shields.io/github/manifest-json/v/rosaj/jdadfapi.svg?style=flat)
