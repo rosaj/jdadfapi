@@ -3,6 +3,10 @@ An ADF java library for editing and creating common ADF xml files.
 
 ![Build Status]( https://img.shields.io/gitlab/pipeline/rosaj/jdadfapi.svg?style=flat  )
 ![Version](https://img.shields.io/github/manifest-json/v/rosaj/jdadfapi.svg?style=flat)
+![](https://img.shields.io/badge/jar-yes-green.svg)
+
+
+<a href="https://github.com/rosaj/jdadfapi/blob/master/out/artifacts/jdadfapi_jar/jdadfapi.jar" > Jar</a>
 
 
 A java library for editing and creating xml for Oracle ADF applications. This is usually done through JDeveloper but when doing repetitve task you really should make it faster.
