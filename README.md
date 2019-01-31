@@ -12,7 +12,7 @@ This api is using decentxml for xml management, which preserve the attribute ord
 
 I will build this to maven as soon as i can.
 
-Examples of how to use api:
+Examples:
 
 
 ```java
