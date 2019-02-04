@@ -103,6 +103,7 @@ for (Page page : viewController.getPages()) {
  //or connect it to a default activity using task flow action
  Page somePage = ...;
  for (TaskFlow taskFlow : viewController.getTaskFlows()) {
+     //add page to task flow to create new View
      View view = taskFlow.addView(somePage);
      //if taskflow doesn't have default view set this as default
      if(!taskFlow.hasDefaultActivity()) taskFlow.setDefaultActivity(view);
@@ -128,6 +129,9 @@ for (Page page : viewController.getPages()) {
           </control-flow-rule>
           */
      }
+     
+     //save taskflow
+     taskFlow.save();
  }
 
 
