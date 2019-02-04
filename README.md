@@ -99,7 +99,8 @@ for (Page page : viewController.getPages()) {
 
 
  //let say we want to add a page to all task flows
- //and set it to default view
+ //and set it to default view if there is no default activity
+ //or connect it to a default activity using task flow action
  Page somePage = ...;
  for (TaskFlow taskFlow : viewController.getTaskFlows()) {
      View view = taskFlow.addView(somePage);
