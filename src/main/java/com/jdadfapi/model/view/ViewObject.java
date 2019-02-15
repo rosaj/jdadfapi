@@ -11,7 +11,6 @@ import com.jdadfapi.model.common.Item;
 import com.jdadfapi.model.common.NamedModelDocument;
 import com.jdadfapi.model.view.viewlink.ViewLink;
 import com.jdadfapi.model.view.viewlink.ViewLinkDefEnd;
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName;
 import de.pdark.decentxml.*;
 import de.pdark.decentxml.dtd.DocType;
 

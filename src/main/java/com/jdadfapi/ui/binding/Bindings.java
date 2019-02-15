@@ -4,14 +4,10 @@ import com.jdadfapi.TagNames;
 import com.jdadfapi.XMLElement;
 import com.jdadfapi.model.applicationmodule.ViewUsage;
 import com.jdadfapi.model.view.ViewAttribute;
-import com.jdadfapi.model.view.ViewObject;
-import com.sun.org.apache.xpath.internal.operations.Bool;
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName;
 import de.pdark.decentxml.Element;
 import de.pdark.decentxml.Node;
 import de.pdark.decentxml.XMLTokenizer;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 

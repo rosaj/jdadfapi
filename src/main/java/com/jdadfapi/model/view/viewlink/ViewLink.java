@@ -5,7 +5,6 @@ import com.jdadfapi.FileUtils;
 import com.jdadfapi.TagNames;
 import com.jdadfapi.model.Model;
 import com.jdadfapi.model.common.NamedModelDocument;
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName;
 import de.pdark.decentxml.*;
 import de.pdark.decentxml.dtd.DocType;
 

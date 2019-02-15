@@ -1,9 +1,7 @@
 package com.jdadfapi.ui.databindings;
 
-import com.jdadfapi.AttributeNames;
 import com.jdadfapi.TagNames;
 import com.jdadfapi.XMLElement;
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName;
 import de.pdark.decentxml.Element;
 import de.pdark.decentxml.Node;
 import de.pdark.decentxml.XMLTokenizer;

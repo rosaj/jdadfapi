@@ -1,11 +1,8 @@
 package com.jdadfapi;
 
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName;
-import com.sun.xml.internal.ws.util.StringUtils;
 import de.pdark.decentxml.Attribute;
 import de.pdark.decentxml.Element;
 import de.pdark.decentxml.Namespace;
-import org.w3c.dom.Attr;
 
 import java.util.Arrays;
 import java.util.List;
