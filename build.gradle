@@ -1,3 +1,5 @@
+apply plugin: 'maven'
+
 group 'com.github.rosaj'
 version '0.1'
 
