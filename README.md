@@ -1,12 +1,7 @@
 # JD ADF API
 An ADF java library for editing and creating common ADF xml files.
 
-![Build Status]( https://img.shields.io/gitlab/pipeline/rosaj/jdadfapi.svg?style=flat  )
-![Version](https://img.shields.io/github/manifest-json/v/rosaj/jdadfapi.svg?style=flat)
-![](https://img.shields.io/badge/jar-yes-green.svg)
-
-
-<a href="https://github.com/rosaj/jdadfapi/blob/master/out/artifacts/jdadfapi_jar/jdadfapi.jar" > Jar</a>
+[![](https://jitpack.io/v/rosaj/jdadfapi.svg)](https://jitpack.io/#rosaj/jdadfapi)
 
 
 A java library for editing and creating xml for Oracle ADF applications. This is usually done through JDeveloper but when doing repetitve task you really should make it faster.
@@ -14,7 +9,29 @@ For now only the most common xml files can be modifyed such as ViewObjects, Enti
 
 This api is using decentxml for xml management, which preserve the attribute order of each xml tag, opposite to DOM xml parsers.
 
-I will build this to maven as soon as i can.
+To get a Git project into your build:
+
+Step 1. Add the JitPack repository to your build file
+Add it in your root build.gradle at the end of repositories:
+
+```gradle
+allprojects {
+ repositories {
+  ...
+  maven { url 'https://jitpack.io' }
+ }
+}
+```
+
+Step 2. Add the dependency
+
+```gradle
+dependencies {
+	        implementation 'com.github.rosaj:jdadfapi:0.11'
+	}
+```
+
+
 
 Examples:
 
