@@ -1,27 +1,19 @@
-group 'com.jdadfapi'
-version '1.0-SNAPSHOT'
+group 'com.github.rosaj'
+//Artifact 'jdadfapi'
+version '0.1-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'maven'
 
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    maven { url "https://jitpack.io" }
 }
 
 dependencies {
 // https://mvnrepository.com/artifact/de.pdark/decentxml
     compile group: 'de.pdark', name: 'decentxml', version: '1.4'
     testCompile group: 'junit', name: 'junit', version: '4.12'
-}
-publishing {
-    publications {
-        maven(MavenPublication) {
-            groupId = 'com.jdadfapi'
-            artifactId = 'jdadfapi'
-            version = '1.0-SNAPSHOT'
-
-            from components.java
-        }
-    }
 }
