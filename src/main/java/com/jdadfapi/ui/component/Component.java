@@ -63,6 +63,7 @@ public class Component extends XMLElement {
         return null;
     }
     public void setParent(Component parent){
+        /*
         this.parent = parent;
         if(parent == null) {
             element.setParent(null);
@@ -70,33 +71,70 @@ public class Component extends XMLElement {
             return;
         }
         element.setParent(parent.element);
+
+        */
+
+        setParent(parent, -1);
+
+    }
+    private void setParent(Component parent, int index){
+        if(this.parent  == parent)return;
+
+        if(this.parent != null){
+            Component temp = this.parent;
+            this.parent = null;
+            temp.removeChild(this);
+        }
+
+        if(parent != null){
+            if (index < 0) {
+                parent.addChild(this);
+            }
+            else {
+                parent.addChild(index, this);
+            }
+            element.setParent(parent.element);
+        }
+
+        this.parent = parent;
+
     }
     public void addChild(Component child){
-        //if(child.parent == parent) return;
-        if(child.parent != null)child.remove();
+
+        if(child.parent != null)
+            parent.removeChild(child);
+
         child.setParent(this);
+
+
         element.addNode(child.element);
         children.add(child);
     }
     public void addChild(int index,Component child){
-       // if(child.parent == parent) return;
-        element.addNode(index, child.element);
+
+        if(child.parent != null)
+            parent.removeChild(child);
+
         child.setParent(this);
+
+        element.addNode(index, child.element);
         children.add(index,child);
     }
     public boolean removeChild(Component child){
         boolean isRemove  = element.removeNode(child.element);
         if(!isRemove)return false;
+
         children.remove(child);
         child.setParent(null);
-        return true ;
+
+        return true;
     }
     public boolean removeChild(int index){
-        Node node = element.removeNode(index);
-        if(node == null) return false;
+        Node node = element.getNode(index);
+
         Component child = findByNode(node);
-        children.remove(child);
-        child.setParent(null);
+
+        removeChild(child);
 
         return true ;
     }
