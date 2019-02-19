@@ -7,6 +7,9 @@ import de.pdark.decentxml.Element;
 import de.pdark.decentxml.Node;
 import de.pdark.decentxml.XMLTokenizer;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by IntelliJ IDEA.
  *
@@ -18,6 +21,7 @@ import de.pdark.decentxml.XMLTokenizer;
 
 public class ViewAccessor extends XMLElement {
     private ParameterMap parameterMap;
+    private List<ViewCriteriaUsage> viewCriteriaUsages = new ArrayList<>();
     public ViewAccessor(Element element) {
         super(element);
         loadTree();
@@ -31,11 +35,16 @@ public class ViewAccessor extends XMLElement {
                 Element e = (Element) n;
                 switch (e.getName()) {
                     case TagNames.PARAMETER_MAP     : resolveParameterMap(e);break;
+                    case TagNames.VIEW_CRITERIA_USAGE: resolveViewCriteriaUsage(e);break;
                     default:log(e);
                 }
             }
         }
 
+    }
+
+    private void resolveViewCriteriaUsage(Element e) {
+        viewCriteriaUsages.add(new ViewCriteriaUsage(e));
     }
 
     private void resolveParameterMap(Element e) {
@@ -60,12 +69,27 @@ public class ViewAccessor extends XMLElement {
     public void setRowLevelBinds(String value){
         setAttrValue(AttributeNames.ROW_LEVEL_BINDS,value);
     }
-    //TODO: POPRAVIT!!!
+    //TODO: POPRAVIT!!! WHAT?
 
     public String getViewObjectSimpleName(){
         return getSimple(getViewObjectName());
     }
 
+
+    public List<ViewCriteriaUsage> getViewCriteriaUsages() {
+        return viewCriteriaUsages;
+    }
+
+    public ViewCriteriaUsage addViewCriteraUsage(ViewCriteria viewCriteria){
+        ViewCriteriaUsage vcu = new ViewCriteriaUsage(addChildElement(0, TagNames.VIEW_CRITERIA_USAGE));
+
+        vcu.setName(viewCriteria.getName());
+        vcu.setFullName(viewCriteria.getViewObjectName()+"."+viewCriteria.getName());
+
+        viewCriteriaUsages.add(vcu);
+
+        return vcu;
+    }
 
     public ParameterMap getParameterMap() {
         return parameterMap;

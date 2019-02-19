@@ -73,6 +73,7 @@ public class ViewObject extends NamedModelDocument {
     private List<ViewLinkAccessor> viewLinkAccessors = new ArrayList<>();
     private List<EntityUsage> entityUsages = new ArrayList<>();
     private List<Variable> variables = new ArrayList<>();
+    private List<ViewCriteria> viewCriterias = new ArrayList<>();
     private LOVUIHints lovuiHints;
     private AttrArray keyAttributes;
     private SQLQuery sqlQuery;
@@ -113,11 +114,16 @@ public class ViewObject extends NamedModelDocument {
                     case TagNames.LOV_UI_HINTS      : resolveLOVUIHints(e);break;
                     case TagNames.VARIABLE          : resolveVariable(e); break;
                     case TagNames.SQL_QUERY         : resolveSQLQuery(e); break;
+                    case TagNames.VIEW_CRITERIA     : resolveViewCriteria(e); break;
                     default:log(e);
                 }
             }
         }
 
+    }
+
+    private void resolveViewCriteria(Element e) {
+        viewCriterias.add(new ViewCriteria(e));
     }
 
 
@@ -254,6 +260,9 @@ public class ViewObject extends NamedModelDocument {
         return viewLinkAccessor;
     }
 
+    public List<ViewCriteria> getViewCriterias() {
+        return viewCriterias;
+    }
 
     public List<ViewAccessor> getViewAccessors() {
         return viewAccessors;

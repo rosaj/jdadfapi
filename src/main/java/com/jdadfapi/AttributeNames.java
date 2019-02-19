@@ -255,6 +255,7 @@ public interface AttributeNames {
     public static final String ITER_BINDING           = "IterBinding";
     public static final String DEF_NAME               = "DefName";
     public static final String NAME_UPPER             = "Name";
+    public static final String FULL_NAME              = "FullName";
     public static final String VALUE_UPPER            = "Value";
     public static final String CRITERIA               = "Criteria";
     public static final String STATIC_LIST            = "StaticList";
@@ -334,6 +335,8 @@ public interface AttributeNames {
     public static final String INHERIT_PERSONALIZATION= "InheritPersonalization";
 
     public static final String VIEW_OBJECT_NAME       = "ViewObjectName";
+    public static final String CONJUNCTION            = "Conjunction";
+    public static final String MODE                   = "Mode";
     public static final String ROW_LEVEL_BINDS        = "RowLevelBinds";
     public static final String ENTITY_NAME            = "EntityName";
     public static final String HIDDEN                 = "Hidden";

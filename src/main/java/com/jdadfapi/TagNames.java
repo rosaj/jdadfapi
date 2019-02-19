@@ -156,6 +156,8 @@ public interface TagNames {
     public static final String PROPERTIES                       = "Properties";
     public static final String VARIABLE                         = "Variable";
     public static final String SQL_QUERY                        = "SQLQuery";
+    public static final String VIEW_CRITERIA                    = "ViewCriteria";
+    public static final String VIEW_CRITERIA_USAGE              = "ViewCriteriaUsage";
     public static final String SCHEMA_BASED_PROPERTIES          = "SchemaBasedProperties";
     public static final String SORT_CRITERIA                    = "SortCriteria";
     public static final String SORT                             = "Sort";
