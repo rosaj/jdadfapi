@@ -233,7 +233,7 @@ public class Model {
     }
 
     public ViewObject createSQLViewObject(String path, String name, String sql){
-        ViewObject vo = createViewObject(path, name, ViewObject.Type.Entity);
+        ViewObject vo = createViewObject(path, name, ViewObject.Type.SQL);
         vo.setSqlQuery(sql);
         List<String> names = extractSqlColumnNames(sql);
 
