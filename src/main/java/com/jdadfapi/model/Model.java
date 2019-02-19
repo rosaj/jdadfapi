@@ -431,6 +431,10 @@ public class Model {
 
 
     public static List<String> extractSqlColumnNames(String query){
+
+        List<String> names = new ArrayList<>();
+        if(query == null || query.trim().isEmpty()) return names;
+
         query = query.toLowerCase().replaceAll("  ", " ").replaceAll(" ,",",");
 
 
@@ -454,7 +458,6 @@ public class Model {
 
         String[] cols = query.split(",");
 
-        List<String> names = new ArrayList<>();
         for(String name : cols){
             name  = name.trim();
             int index = name.lastIndexOf(" ");
