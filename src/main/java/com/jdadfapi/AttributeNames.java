@@ -382,6 +382,7 @@ public interface AttributeNames {
     public static final String IS_EFFECTIVE_END_DATE  = "IsEffectiveEndDate";
     public static final String IS_EFFECTIVE_START_DATE= "IsEffectiveStartDate";
     public static final String _DESCRIPTION           = "_description";
+    public static final String _OVERRIDE_ATTR         = "_OverrideAttr";
     public static final String _DISPLAY_SIZE          = "_DisplaySize";
     public static final String RES_ID                 = "ResId";
     public static final String PPROPERTIES_FILE       = "PropertiesFile";

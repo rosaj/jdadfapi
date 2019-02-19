@@ -104,4 +104,13 @@ public class ViewAttribute extends NamedXMLElement {
         setSchemaBPAttr(TagNames.CATEGORY , value);
     }
 
+
+
+    public String getOverrideAttr (){
+        return getDesignTimeAttr(AttributeNames._OVERRIDE_ATTR );
+    }
+    public void setOverrideAttr (String value){
+        setDesignTimeAttr(AttributeNames._OVERRIDE_ATTR , value);
+    }
+
 }

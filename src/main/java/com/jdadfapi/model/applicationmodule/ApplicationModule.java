@@ -43,7 +43,7 @@ public class ApplicationModule extends NamedModelDocument {
     }
 
     public ViewUsage createViewUsage(ViewObject viewObject){
-        
+
         ViewUsage viewUsage = new ViewUsage(addChildElement(TagNames.VIEW_USAGE),this);
 
         viewUsage.setName(viewObject.getName());
