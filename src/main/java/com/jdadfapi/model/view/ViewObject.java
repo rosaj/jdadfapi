@@ -78,6 +78,8 @@ public class ViewObject extends NamedModelDocument {
     private AttrArray keyAttributes;
     private SQLQuery sqlQuery;
 
+    private StaticList staticList;
+
     public ViewObject(Document document, String path, Model model) {
         super(document, path,model);
         loadTree();
@@ -115,11 +117,16 @@ public class ViewObject extends NamedModelDocument {
                     case TagNames.VARIABLE          : resolveVariable(e); break;
                     case TagNames.SQL_QUERY         : resolveSQLQuery(e); break;
                     case TagNames.VIEW_CRITERIA     : resolveViewCriteria(e); break;
+                    case TagNames.STATIC_LIST       : resolveStaticList(e); break;
                     default:log(e);
                 }
             }
         }
 
+    }
+
+    private void resolveStaticList(Element e) {
+        staticList = new StaticList(e);
     }
 
     private void resolveViewCriteria(Element e) {
@@ -185,10 +192,26 @@ public class ViewObject extends NamedModelDocument {
         return listBindings;
     }
 
+    public boolean isStaticList(){
+        return staticList != null;
+    }
+
+    public StaticList getStaticList() {
+        return staticList;
+    }
+
     public String getSqlQuery() {
         return sqlQuery == null ? null: sqlQuery.getSql();
     }
     public void setSqlQuery(String value){
+        if(value == null){
+            if(sqlQuery != null){
+                sqlQuery.remove();
+                sqlQuery = null;
+            }
+            return;
+        }
+
         if(sqlQuery == null) sqlQuery = new SQLQuery(insertNewElement(TagNames.SQL_QUERY));
         sqlQuery.setSql(value);
     }

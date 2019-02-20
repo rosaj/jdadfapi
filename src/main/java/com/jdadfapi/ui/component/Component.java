@@ -1,6 +1,8 @@
 package com.jdadfapi.ui.component;
 
+import com.jdadfapi.TagNames;
 import com.jdadfapi.XMLElement;
+import com.jdadfapi.ui.component.core.Attribute;
 import com.jdadfapi.ui.component.core.View;
 import com.jdadfapi.ui.component.layout.Facet;
 import com.jdadfapi.ui.component.templating.Composition;
@@ -46,6 +48,35 @@ public class Component extends XMLElement {
             children.add(child);
         }
 
+    }
+
+    private Attribute findAttributeByName(String name){
+        List<Attribute> attributes = getComponents(Attribute.class);
+
+        for (Attribute attribute : attributes) {
+            if(attribute.getName().equals(name)) return attribute;
+        }
+
+        return null;
+    }
+
+
+    public String getAttribute(String name) {
+
+        Attribute attribute = findAttributeByName(name);
+        if(attribute != null) return attribute.getValue();
+
+        return null;
+    }
+    public void setAttribute(String name, String value){
+
+        Attribute attribute = findAttributeByName(name);
+
+        if(attribute == null){
+            attribute = new Attribute(this);
+        }
+
+        attribute.setValue(value);
     }
 
 

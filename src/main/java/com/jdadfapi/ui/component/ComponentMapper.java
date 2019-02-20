@@ -1,6 +1,7 @@
 package com.jdadfapi.ui.component;
 
 import com.jdadfapi.TagNames;
+import com.jdadfapi.ui.component.core.Attribute;
 import com.jdadfapi.ui.component.core.SelectItems;
 import com.jdadfapi.ui.component.core.Validator;
 import com.jdadfapi.ui.component.core.View;
@@ -71,6 +72,7 @@ public class ComponentMapper {
         map.put(SelectItems.class, TagNames.SELECT_ITEMS);
         map.put(OutputFormatted.class, TagNames.OUTPUT_FORMATTED);
         map.put(SelectOneRadio.class, TagNames.SELECT_ONE_RADIO);
+        map.put(Attribute.class, TagNames.F_ATTRIBUTE);
     }
 
 

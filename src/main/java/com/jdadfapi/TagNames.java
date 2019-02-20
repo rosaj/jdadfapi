@@ -40,6 +40,7 @@ public interface TagNames {
     public static final String SELECT_ONE_CHOICE                = "af:selectOneChoice";
     public static final String SELECT_ONE_RADIO                 = "af:selectOneRadio";
     public static final String SELECT_ITEMS                     = "f:selectItems";
+    public static final String F_ATTRIBUTE                      = "f:attribute";
     public static final String CONVERT_DATE_TIME                = "af:convertDateTime";
     public static final String CONVERT_NUMBER                   = "af:convertNumber";
     public static final String PAGE_TEMPLATE_DEF                = "af:pageTemplateDef";
@@ -157,6 +158,7 @@ public interface TagNames {
     public static final String VARIABLE                         = "Variable";
     public static final String SQL_QUERY                        = "SQLQuery";
     public static final String VIEW_CRITERIA                    = "ViewCriteria";
+    public static final String STATIC_LIST                      = "StaticList";
     public static final String VIEW_CRITERIA_USAGE              = "ViewCriteriaUsage";
     public static final String SCHEMA_BASED_PROPERTIES          = "SchemaBasedProperties";
     public static final String SORT_CRITERIA                    = "SortCriteria";

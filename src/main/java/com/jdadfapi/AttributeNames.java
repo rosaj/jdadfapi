@@ -128,6 +128,7 @@ public interface AttributeNames {
     public static final String LAYOUT                 = "layout";
     public static final String LANDMARK               = "landmark";
     public static final String COLUMNS                = "columns";
+    public static final String COLUMNS_UPPER          = "Columns";
     public static final String CHANGED                = "changed";
     public static final String CHANGED_DESC           = "changedDesc";
     public static final String EDITABLE               = "editable";
@@ -156,6 +157,7 @@ public interface AttributeNames {
     public static final String RETURN_POPUP_DATA_LISTENER = "returnPopupDataListener";
     public static final String SEARCH_DIALOG          = "searchDialog";
     public static final String ROWS                   = "rows";
+    public static final String ROWS_UPPER             = "Rows";
     public static final String DIMENSIONS_FROM        = "dimensionsFrom";
     public static final String SECRET                 = "secret";
     public static final String WRAP                   = "wrap";
