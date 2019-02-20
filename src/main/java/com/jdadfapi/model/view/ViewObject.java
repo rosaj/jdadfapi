@@ -221,11 +221,6 @@ public class ViewObject extends NamedModelDocument {
     }
     public void addKeyAttribute(String name){
         if(keyAttributes == null){
-/*            Element e = new Element(TagNames.ATTR_ARRAY);
-
-            int index = getLastIndexOfElement(TagNames.ATTR_ARRAY, TAG_ORDER)+1;
-            element.addNode(index, e);
-            */
             keyAttributes = new AttrArray(insertNewElement(TagNames.ATTR_ARRAY));
             keyAttributes.setName(AttributeNames.KEY_ATTRIBUTES);
         }

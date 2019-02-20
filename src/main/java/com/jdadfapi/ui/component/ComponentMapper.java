@@ -14,6 +14,7 @@ import com.jdadfapi.ui.component.layout.*;
 import com.jdadfapi.ui.component.operations.ConvertDateTime;
 import com.jdadfapi.ui.component.operations.ConvertNumber;
 import com.jdadfapi.ui.component.operations.Converter;
+import com.jdadfapi.ui.component.operations.SetPropertyListener;
 import com.jdadfapi.ui.component.templating.*;
 import com.jdadfapi.ui.component.textandselection.*;
 
@@ -73,6 +74,7 @@ public class ComponentMapper {
         map.put(OutputFormatted.class, TagNames.OUTPUT_FORMATTED);
         map.put(SelectOneRadio.class, TagNames.SELECT_ONE_RADIO);
         map.put(Attribute.class, TagNames.F_ATTRIBUTE);
+        map.put(SetPropertyListener.class, TagNames.SET_PROPERTY_LISTENER);
     }
 
 

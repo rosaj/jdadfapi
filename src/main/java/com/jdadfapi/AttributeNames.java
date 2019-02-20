@@ -202,6 +202,8 @@ public interface AttributeNames {
     public static final String MAXIMIZED              = "maximized";
     public static final String VALIDATOR_ID           = "validatorId";
     public static final String TYPE                   = "type";
+    public static final String FROM                   = "from";
+    public static final String TO                     = "to";
     public static final String PATTERN                = "pattern";
     public static final String CURRENCY_CODE          = "currencyCode";
     public static final String CURRENCY_SYMBOL        = "currencySymbol";
