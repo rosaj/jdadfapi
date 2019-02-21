@@ -93,8 +93,9 @@ public class Component extends XMLElement {
         }
         return null;
     }
+
+
     public void setParent(Component parent){
-        /*
         this.parent = parent;
         if(parent == null) {
             element.setParent(null);
@@ -102,8 +103,39 @@ public class Component extends XMLElement {
             return;
         }
         element.setParent(parent.element);
+    }
+    public void addChild(Component child){
+        //if(child.parent == parent) return;
+        if(child.parent != null)child.remove();
+        child.setParent(this);
+        element.addNode(child.element);
+        children.add(child);
+    }
+    public void addChild(int index,Component child){
+        // if(child.parent == parent) return;
+        element.addNode(index, child.element);
+        child.setParent(this);
+        children.add(index,child);
+    }
+    public boolean removeChild(Component child){
+        boolean isRemove  = element.removeNode(child.element);
+        if(!isRemove)return false;
+        children.remove(child);
+        child.setParent(null);
+        return true ;
+    }
+    public boolean removeChild(int index){
+        Node node = element.removeNode(index);
+        if(node == null) return false;
+        Component child = findByNode(node);
+        children.remove(child);
+        child.setParent(null);
 
-        */
+        return true ;
+    }
+
+    /*
+    public void setParent(Component parent){
 
         setParent(parent, -1);
 
@@ -170,6 +202,9 @@ public class Component extends XMLElement {
 
         return true ;
     }
+
+    */
+
     public List<Component> getChildren (){ return children; }
     public String getTagName(){
         return element.getBeginName();
