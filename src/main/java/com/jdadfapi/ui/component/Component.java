@@ -117,6 +117,8 @@ public class Component extends XMLElement {
             temp.removeChild(this);
         }
 
+        this.parent = parent;
+
         if(parent != null){
             if (index < 0) {
                 parent.addChild(this);
@@ -127,13 +129,12 @@ public class Component extends XMLElement {
             element.setParent(parent.element);
         }
 
-        this.parent = parent;
 
     }
     public void addChild(Component child){
 
-        if(child.parent != null)
-            parent.removeChild(child);
+    //    if(child.parent != null)
+     //       parent.removeChild(child);
 
         child.setParent(this);
 
@@ -143,8 +144,8 @@ public class Component extends XMLElement {
     }
     public void addChild(int index,Component child){
 
-        if(child.parent != null)
-            parent.removeChild(child);
+ //       if(child.parent != null)
+  //          parent.removeChild(child);
 
         child.setParent(this);
 
