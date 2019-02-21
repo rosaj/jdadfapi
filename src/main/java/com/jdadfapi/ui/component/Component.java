@@ -54,7 +54,7 @@ public class Component extends XMLElement {
         List<Attribute> attributes = getComponents(Attribute.class);
 
         for (Attribute attribute : attributes) {
-            if(name.equals(attribute.getName())) return attribute;
+            if(attribute.getName().equals(name)) return attribute;
         }
 
         return null;
@@ -74,6 +74,7 @@ public class Component extends XMLElement {
 
         if(attribute == null){
             attribute = new Attribute(this);
+            attribute.setName(name);
         }
 
         attribute.setValue(value);
