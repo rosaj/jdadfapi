@@ -204,6 +204,10 @@ public interface AttributeNames {
     public static final String TYPE                   = "type";
     public static final String FROM                   = "from";
     public static final String TO                     = "to";
+    public static final String SUGGEST_ITEMS          = "suggestItems";
+    public static final String SUGGESTED_ITEMS        = "suggestedItems";
+    public static final String SMART_LIST             = "smartList";
+    public static final String MAX_SUGGESTED_ITEMS    = "maxSuggestedItems";
     public static final String PATTERN                = "pattern";
     public static final String CURRENCY_CODE          = "currencyCode";
     public static final String CURRENCY_SYMBOL        = "currencySymbol";

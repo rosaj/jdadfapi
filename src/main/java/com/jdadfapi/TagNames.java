@@ -40,6 +40,7 @@ public interface TagNames {
     public static final String SELECT_ONE_CHOICE                = "af:selectOneChoice";
     public static final String SELECT_ONE_RADIO                 = "af:selectOneRadio";
     public static final String SET_PROPERTY_LISTENER            = "af:setPropertyListener";
+    public static final String AUTO_SUGGEST_BEHAVIOR            = "af:autoSuggestBehavior";
     public static final String SELECT_ITEMS                     = "f:selectItems";
     public static final String F_ATTRIBUTE                      = "f:attribute";
     public static final String CONVERT_DATE_TIME                = "af:convertDateTime";

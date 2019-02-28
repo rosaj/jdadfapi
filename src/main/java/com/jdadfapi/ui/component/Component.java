@@ -72,12 +72,19 @@ public class Component extends XMLElement {
 
         Attribute attribute = findAttributeByName(name);
 
-        if(attribute == null){
+        if(attribute == null && value == null)return;
+
+        if(attribute == null) {
             attribute = new Attribute(this);
             attribute.setName(name);
         }
 
-        attribute.setValue(value);
+        if(value != null)
+            attribute.setValue(value);
+
+        else
+            removeChild(attribute);
+
     }
 
 
@@ -106,14 +113,12 @@ public class Component extends XMLElement {
         element.setParent(parent.element);
     }
     public void addChild(Component child){
-        //if(child.parent == parent) return;
         if(child.parent != null)child.remove();
         child.setParent(this);
         element.addNode(child.element);
         children.add(child);
     }
     public void addChild(int index,Component child){
-        // if(child.parent == parent) return;
         element.addNode(index, child.element);
         child.setParent(this);
         children.add(index,child);

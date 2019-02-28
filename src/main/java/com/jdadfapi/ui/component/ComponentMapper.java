@@ -11,10 +11,7 @@ import com.jdadfapi.ui.component.generalcontrols.Button;
 import com.jdadfapi.ui.component.generalcontrols.Link;
 import com.jdadfapi.ui.component.jstl.Set;
 import com.jdadfapi.ui.component.layout.*;
-import com.jdadfapi.ui.component.operations.ConvertDateTime;
-import com.jdadfapi.ui.component.operations.ConvertNumber;
-import com.jdadfapi.ui.component.operations.Converter;
-import com.jdadfapi.ui.component.operations.SetPropertyListener;
+import com.jdadfapi.ui.component.operations.*;
 import com.jdadfapi.ui.component.templating.*;
 import com.jdadfapi.ui.component.textandselection.*;
 
@@ -75,6 +72,7 @@ public class ComponentMapper {
         map.put(SelectOneRadio.class, TagNames.SELECT_ONE_RADIO);
         map.put(Attribute.class, TagNames.F_ATTRIBUTE);
         map.put(SetPropertyListener.class, TagNames.SET_PROPERTY_LISTENER);
+        map.put(AutoSuggestBehavior.class, TagNames.AUTO_SUGGEST_BEHAVIOR);
     }
 
 
