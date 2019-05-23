@@ -127,7 +127,7 @@ public class XMLElement  {
 
             if(ns != null && !ns.getPrefix().isEmpty())level += asEmptyString(ns.getPrefix());
 
-            level += asEmptyString(element.getBeginName())+"  " ;// mesto za < i jos jedno prazno mesto
+            level += asEmptyString(element.getBeginName())+ "  " ;// mesto za < i jos jedno prazno mesto
 
             int lineLn = level.length();
 
@@ -164,7 +164,10 @@ public class XMLElement  {
 
             // 4-> ="" i razmak
             if(lineLn + 4 + attr.getName().length()+ attr.getValue().length()> LINE_LIMIT){
-                return "\n" + level.substring(ADFXMLWriter.indent.length());
+                // ako postoji prefix onda za toliko moramo substringat udesno inace bi bilo za jedno ili dva mjesta
+                // indentano udesno, ovisno o duzini prefixa
+                int prefixLen = ns == null ? 0 : ns.getPrefix().length();
+                return "\n" + level.substring(ADFXMLWriter.indent.length() + prefixLen);
             }
             return " ";
 
